@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+	<title>Superpng : Example2</title>
+	
+	<link href="styles/base.css" type="text/css" rel="stylesheet" />
+	
+	<style type="text/css">
+		.background {width: 300px; height: 200px; background: url(images/background.gif) repeat }
+		
+	</style>
+	
+	<script type="text/javascript" src="scripts/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="scripts/jquery.superpng.min.js"></script>
+		
+	<script type="text/javascript">
+
+	    $(document).ready(function() {
+		
+			$('.png').superpng({path: 'images/blank.gif'});
+			
+	    });
+	    
+	</script>
+	
+</head>
+<body>
+	<div class="background">
+    	<div class="png" style="width:180px; height:180px; background:url(images/bauble.png) no-repeat -50px 10px"></div>
+    </div>
+</body>
+</html>

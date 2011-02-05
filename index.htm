@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+	<title>Superpng jQuery plug-in</title>
+	
+	<link href="styles/base.css" type="text/css" rel="Stylesheet" />
+	
+	<style type="text/css">
+		
+		body {margin: 20px; font-family:Verdana, Arial} 
+
+		h1, h2, h3 {margin: 30px 0 20px 0;}
+		pre {border: solid 1px #c0c0c0; margin: 20px 0 20px 0; padding:20px 8px 20px 8px; width:860px;background-color:#fafafa}
+		label {display:inline-block; width:100px}
+		iframe {width:300px; height:200px}
+		textarea {width:400px}
+		
+	</style>
+</head>
+<body>
+	<h1>Superpng jQuery plugin</h1>
+	<p>The superpng plug-in has been written to provide a flexible png alpha api to developers using jQuery and who need to support IE6.</p> 
+	<p>The script uses either the <a href="http://msdn.microsoft.com/en-us/library/ms532969(v=vs.85).aspx">AlphaImageLoader filter</a> or vml based on an approach by <a href="http://www.dillerdesign.com/experiment/DD_belatedPNG/">Drew Diller</a>, depending on the type of tag and whether background-position is required</p><p>For more information on alpha pngs and IE6, please see http://queryj.com.</p>
+	
+    <div id="example1">
+        <h3>Example 1</h3>
+
+        <p>Set .png transparency on an &lt;img&gt; tag. Provides the location of the tranparent .gif to use.</p>
+        
+		<pre>$('img').superpng({path: '/images/blank.gif'});</pre>
+		
+        <iframe src="example1.htm"></iframe>
+    </div>
+
+    <div id="example2">
+        <h3>Example 2</h3>
+
+        <p>Set png image on a &lt;div&gt; tag with background-position.</p>
+        <pre>$('.png').superpng({path: '/images/blank.gif'});</pre>
+
+        <iframe src="example2.htm"></iframe>
+    </div>	
+	
+	<div id="example3">
+        <h3>Example 3</h3>
+
+        <p>Use the vml method and change background position when the image is clicked.</p>
+        <pre>$('.png').superpng({mode: 'vml', path: '/images/blank.gif'});
+			
+$('.png').click(function(e) {
+								
+	$(this).css('background-position', '20px 0');
+	$('.png').superpng();
+	e.preventDefault();
+});
+		</pre>
+
+        <iframe src="example3.htm"></iframe>
+    </div>
+
+</body>
+</html>

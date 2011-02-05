@@ -4,21 +4,21 @@
 <head>
 	<title>Superpng : Example3</title>
 	
-	<link href="../styles/base.css" type="text/css" rel="stylesheet" />
+	<link href="styles/base.css" type="text/css" rel="stylesheet" />
 	
 	<style type="text/css">
-		.background {width: 300px; height: 200px; background: url(../images/background.gif) repeat }
+		.background {width: 300px; height: 200px; background: url(images/background.gif) repeat }
 		
 	</style>
 	
-	<script type="text/javascript" src="../scripts/jquery-1.4.4.min.js"></script>
-	<script type="text/javascript" src="../scripts/jquery.superpng.js"></script>
+	<script type="text/javascript" src="scripts/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="scripts/jquery.superpng.min.js"></script>
 		
 	<script type="text/javascript">
 
 	    $(document).ready(function() {
 		
-			$('.png').superpng({mode: 'vml', path: '../images/blank.gif'});
+			$('.png').superpng({mode: 'vml', path: 'images/blank.gif'});
 			
 			$('.png').click(function(e) {
 								
@@ -37,7 +37,7 @@
 <body>
 	<div class="background">
     	<a href="#">
-			<div class="png" style="display:block; width:180px; height:180px; background:url(../images/bauble.png) no-repeat 0 0"></div>
+			<div class="png" style="display:block; width:180px; height:180px; background:url(images/bauble.png) no-repeat 0 0"></div>
 		</a>
     </div>
 </body>

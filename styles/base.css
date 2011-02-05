@@ -55,11 +55,3 @@ table {
 /* -- End of Reset -- */
 
 
-body {font-family:Verdana, Arial}
-h2 {margin: 30px 0 20px 0;}
-pre {border: solid 1px #c0c0c0; padding:8px; width:960px;background-color:#fafafa}
-label {display:inline-block; width:100px}
-iframe {width:300px; height:200px}
-textarea {width:400px}
-
-
