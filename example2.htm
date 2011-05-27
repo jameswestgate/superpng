@@ -8,18 +8,17 @@
 	
 	<style type="text/css">
 		.background {width: 300px; height: 200px; background: url(images/background.gif) repeat }
-		
+		.png {float:left; width:76px; height:76px; background:url(images/roundels.png) no-repeat }
 	</style>
 	
-	<script type="text/javascript" src="scripts/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 	<script type="text/javascript" src="scripts/jquery.superpng.min.js"></script>
 		
 	<script type="text/javascript">
 
 	    $(document).ready(function() {
 		
-			$('.png').superpng({path: 'images/blank.gif'});
-			
+			$('.png').superpng({path: 'images/blank.gif'});			
 	    });
 	    
 	</script>
@@ -27,7 +26,9 @@
 </head>
 <body>
 	<div class="background">
-    	<div class="png" style="width:180px; height:180px; background:url(images/bauble.png) no-repeat -50px 10px"></div>
+    	<div class="png" style="background-position:-76px -76px"></div>
+		<div class="png" style="background-position:-152px -76px"></div>
+		<div class="png" style="background-position:-228px -76px"></div>
     </div>
 </body>
 </html>

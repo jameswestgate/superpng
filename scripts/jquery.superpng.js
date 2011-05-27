@@ -12,7 +12,7 @@
  * 
  * Dual licensed under the MIT or GPL Version 2 licenses.
  *  
- * Version 1.00
+ * Version 1.1
  * 
  * @requires jQuery 1.4
  */
@@ -64,7 +64,7 @@
 						vmlInit = false;
 										
 						//vml behaviour and additional stylesheet code			
-						$('head').append('<style media="screen">vml\\:* {behavior:url(#default#vml);} .superpng-vml {position: absolute; top:0; left:0; z-index:0; margin: 0}</style>');
+						$('head').append('<style media="screen">vml\\:* {behavior:url(#default#vml);} .superpng-container {position:relative; margin:0; display:block;} .superpng-vml {position: absolute; top:0; left:0; z-index:0; margin:0}</style>');
 						
 						regex = 'px'; // /[^\d]/g;
 					}
@@ -79,8 +79,8 @@
 					if (initial) {
 						
 						//Create vml element and place inside container
-						var builder = ['<vml:rect stroked="f" class="superpng-vml" style="', style, '"><vml:fill type="frame" aspect="atmost" src="',
-							src, '" position="', position, '"/></vml:rect>'];
+						var builder = ['<div class="superpng-container" style="', style, '"><vml:rect stroked="f" class="superpng-vml" style="', style, '"><vml:fill type="tile" src="',
+							src, '" position="', position, '"/></vml:rect></div>'];
 						
 						//Add to DOM
 						self.wrapInner(builder.join(''));
@@ -92,8 +92,7 @@
 					//Update existing vml
 					else {
 						var fill = this.vml.children(':first');
-						this.vml.attr('style', style);
-												
+						this.vml.attr('style', style);			
 						fill.attr('position', position);
 					}
 				}

@@ -2,12 +2,12 @@
 
 <html>
 <head>
-	<title>Superpng : Example3</title>
+	<title>Superpng : Example4</title>
 	
 	<link href="styles/base.css" type="text/css" rel="stylesheet" />
 	
 	<style type="text/css">
-		.background {width: 300px; height: 200px; background: url(images/background.gif) repeat }
+		.background {width: 304px; height: 304px; background: url(images/background.gif) repeat }
 		
 	</style>
 	
@@ -19,16 +19,6 @@
 	    $(document).ready(function() {
 		
 			$('.png').superpng({mode: 'vml', path: 'images/blank.gif'});
-			
-			$('.png').click(function(e) {
-								
-				$(this).css('background-position', '20px 0');
-				
-				$('.png').superpng();
-				
-				e.preventDefault();
-			});
-			
 		});
 	    
 	</script>
@@ -36,9 +26,7 @@
 </head>
 <body>
 	<div class="background">
-    	<a href="#">
-			<div class="png" style="display:block; width:180px; height:180px; background:url(images/bauble.png) no-repeat 0 0"></div>
-		</a>
+		<div class="png" style="width:304px; height:304px; background:url(images/roundel.png) repeat -38px -38px"></div>
     </div>
 </body>
 </html>
